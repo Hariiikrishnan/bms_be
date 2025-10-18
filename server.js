@@ -10,10 +10,10 @@ app.use(express.json());
 
 const connectDB = async ()=>{
     try{
-        const conn = await mongoose.connect("mongodb://localhost:27017/bms");
+        const conn = await mongoose.connect("mongodb+srv://therihari36_db_user:tXuVj3n5tunq2OgX@cluster0.7gtqrrm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
         console.log("Connected Mongo DB" + conn.connection.host);
     }catch(e){
-        console.log("Error" + e.message);
+        console.log("Error " + e.message);
     }
 }
 connectDB();
